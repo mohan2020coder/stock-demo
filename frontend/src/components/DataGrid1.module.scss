@@ -1,0 +1,92 @@
+/* src/components/DataGrid.module.scss */
+
+$positive-color: #32b626;
+$negative-color: #d34250;
+$neutral-color: #bdb6b6;
+$font-family: Arial, sans-serif;
+$border-color: #ddd;
+$background-color: #f9f9f9;
+$header-background: #f1f1f1;
+$box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+.datagrid {
+    font-family: $font-family;
+    color: #333;
+    background-color: $background-color;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: $box-shadow;
+    overflow: auto;
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        th, td {
+            border: 1px solid $border-color;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: $header-background;
+            color: #333;
+            font-weight: bold;
+        }
+
+        tbody {
+            tr:nth-child(even) {
+                background-color: $background-color;
+            }
+
+            tr:nth-child(odd) {
+                background-color: #fff;
+            }
+        }
+    }
+
+    .edit {
+        color: $positive-color;
+        cursor: pointer;
+    }
+
+    .chg-negative {
+        background-color: lighten($negative-color, 40%);
+        color: darken($negative-color, 20%);
+    }
+
+    .chg-positive {
+        background-color: lighten($positive-color, 40%);
+        color: darken($positive-color, 20%);
+    }
+
+    .chg-neutral {
+        background-color: lighten($neutral-color, 40%);
+        color: darken($neutral-color, 20%);
+    }
+
+    .bar {
+        height: 20px;
+        display: inline-block;
+    }
+
+    .barPositive {
+        background-color: $positive-color;
+    }
+
+    .barNegative {
+        background-color: $negative-color;
+    }
+
+    .barNeutral {
+        background-color: $neutral-color;
+    }
+}
+
+.negative {
+    background-color: $negative-color !important;
+}
+
+.positive {
+    background-color: $positive-color !important;
+}

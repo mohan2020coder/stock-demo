@@ -1,0 +1,99 @@
+/* src/components/DataGrid.module.scss */
+
+$positive-color: #007bff;
+$negative-color: #e74f5e;
+$neutral-color: #bdb6b6;
+$font-family: Arial, sans-serif;
+$border-color: #ddd;
+$background-color: #2b2b2b;
+$header-background: #444141;
+$font-color: #fffafa;
+$box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+$bar-height: 16px;
+
+.datagrid {
+    font-family: $font-family;
+    color: $font-color;
+    background-color: $background-color;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: $box-shadow;
+    overflow: auto;
+
+    h2 {
+        color: #77dd77;
+        margin-bottom: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        th, td {
+            border: 1px solid $border-color;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: $header-background;
+            color: $font-color;
+            font-weight: bold;
+        }
+
+        tbody {
+            tr:nth-child(even) {
+                background-color: #4e4a4a;
+            }
+
+            tr:nth-child(odd) {
+                background-color: #2b2b2b;
+            }
+        }
+    }
+
+    .edit {
+        color: $positive-color;
+        cursor: pointer;
+    }
+
+    .chg-negative {
+        background-color: lighten($negative-color, 40%);
+        color: darken($negative-color, 20%);
+    }
+
+    .chg-positive {
+        background-color: lighten($positive-color, 40%);
+        color: darken($positive-color, 20%);
+    }
+
+    .chg-neutral {
+        background-color: lighten($neutral-color, 40%);
+        color: darken($neutral-color, 20%);
+    }
+
+    .barContainer {
+        height: $bar-height;
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        margin: 4px 0;
+    }
+
+    .bar {
+        height: 100%;
+        position: absolute;
+    }
+
+    .barPositive {
+        background-color: $positive-color;
+    }
+
+    .barNegative {
+        background-color: $negative-color;
+    }
+
+    .barNeutral {
+        background-color: $neutral-color;
+    }
+}
