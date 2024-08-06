@@ -1,8 +1,8 @@
 /* src/components/DataGrid.module.scss */
 
-$positive-color: #32b626;
-$negative-color: #d34250;
-$neutral-color: #bdb6b6;
+$positive-color: #258d1c;
+$negative-color: #942e38;
+$neutral-color: #4d3838;
 $font-family: Arial, sans-serif;
 $border-color: #ddd;
 $background-color: #f9f9f9;
@@ -69,6 +69,7 @@ $box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         height: 20px;
         display: inline-block;
         position: relative; // Ensure positioning context
+        margin-left: 10px;
     }
 
     .barPositive {

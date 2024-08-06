@@ -32,8 +32,8 @@ const renderBar = (value, styleClass) => {
   const barClass = styles[styleClass];
   return (
     <div className={styles.cellContainer}>
-      <div className={`${styles.bar} ${barClass}`} style={{ width: `${barWidth}%` }}></div>
       <span className={styles.cellValue}>{value}</span>
+      <div className={`${styles.bar} ${barClass}`} style={{ width: `${barWidth}%` }}></div>
     </div>
   );
 };
